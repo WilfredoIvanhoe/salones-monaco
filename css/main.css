@@ -1,0 +1,52 @@
+/* Navbar styles */
+
+nav .brand-logo{
+	float: left;
+	position: relative;
+	
+}
+nav ul{
+	display: inline-block;
+}
+/* end */
+
+/* Conocenos */
+#conocenos {
+	border-bottom: 0em;
+}
+#conocenos-2{
+	margin-bottom: 0em;
+}
+.divider.header{
+	margin-left: 1em;
+	margin-right: 1em;
+}
+#conocenos-header {
+	padding: 1em;
+}
+.conocenos-img {
+	padding: 1em;
+}
+.conocenos-txt {
+	padding: 1em;
+}
+
+/* Salones */
+
+#salones-header {
+	padding: 1em;
+}
+.salones-txt{
+	padding: 1em;
+}
+.conocenos-img {
+	padding: 1em;
+}
+
+/* Parallax */
+#first-parallax {
+	height: 500px;
+}
+#second-parallax {
+	height: 500px;
+}
