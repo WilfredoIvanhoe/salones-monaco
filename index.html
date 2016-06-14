@@ -8,21 +8,29 @@
 	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="css/sparkle.css" rel="stylesheet">
+
 	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/sparkle.jquery.js"></script>
 </head>
 <body>
 	<header>
 		<div class="navbar-fixed">
-			<nav class="grey darken-4" role="navigation">			
+			<ul id="salones1" class="dropdown-content pink darken-1">
+				<li ><a class="white-text" href="#salon-fuentes">Salón Fuentes</a></li>
+		  		<li ><a class="white-text" href="#salon-jardin">Salón Jardín</a></li>
+			</ul>
+			<nav class="pink darken-1" role="navigation">			
 				<div class="nav-wrapper container center">
-					<ul class="hide-on-med-and-down">
+					<ul class="hide-on-med-and-down" id="navbar-large">
 					    <li><a href="#conocenos">Conócenos</a></li>
-					    <li><a href="#salones">Salones</a></li>
+					    <li><a class="dropdown-button" href="#" data-activates="salones1">Salones<i class="material-icons right">arrow_drop_down</i></a></li>
 					    <li><a href="#servicios">Servicios</a></li>
-					    <a href="#" class="brand-logo">Logo Perrón</a>
+					    <div id="logo-container"><a href="#first-parallax" class="brand-logo"><img src="images/logo.png"></a></div>
 					    <li><a href="#paquetes">Paquetes</a></li>
+					    <li><a href="#ubicacion">Ubicación</a></li>
 					    <li><a href="#contacto">Contacto</a></li>
 					</ul>
 					<ul class="side-nav" id="nav-mobile">
@@ -30,6 +38,7 @@
 					    <li><a href="#salones">Salones</a></li>
 					    <li><a href="#servicios">Servicios</a></li>
 					    <li><a href="#paquetes">Paquetes</a></li>
+					    <li><a href="#ubicacion">Ubicación</a></li>
 					    <li><a href="#contacto">Contacto</a></li>
 					</ul>
 					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -38,45 +47,60 @@
 	    </div>
 	</header>
 	<main>
+		<!-- Centered Logo -->
+	 	<div class="hide-on-small-only centered-logo" hidden="true">
+	 		<img src="images/centered-logo.png" class="responsive-img">
+		</div>
+	 	<div class="hide-on-med-and-up centered-logo" style="width: 300px;height:195px;margin-top: -98px;margin-left: -150px;" hidden="true">
+	 		<img src="images/centered-logo.png" class="responsive-img">
+		</div>
+		<!-- end -->
 		<!--First parallax-->
-		<div class="parallax-container" id="first-parallax">
+		<div class="parallax-container scrollspy" id="first-parallax">
 			<div class="parallax">
-				<img src="images/naturaleza-1.jpg">		
+				<img src="images/main.png">		
 			</div>
 		</div>
 		<!--Ends-->
 
 		<!--Conocenos-->
-		<div class="grey darken-4 scrollspy" id="conocenos">
-			<div class="container grey lighten-5">
-				<div class="row" id="conocenos-1">
+		<div class="purple lighten-3 scrollspy" id="conocenos">
+			<div class="container pink lighten-5 z-depth-2">
+				<div class="row">
 					<div class="col s12 m12 l12">
 						<div class="section" id="conocenos-header">
 							<h2>Conócenos</h2>
 						</div>
 						<div class="divider header grey darken-2"></div>
 					</div>
+				</div>
+				<!-- Quienes somos' row -->
+				<div class="row" id="conocenos-1">	
 					<div class="col s12 m12 l4 center">
-						<div class="section conocenos-img"><img src="images/mesa-2.JPG" class="responsive-img" "></div>
+						<div class="section conocenos-img"><img src="images/mesa-2.JPG" class="responsive-img" style="border-radius: 10px"></div>
 					</div>
 					<div class="col s12 m12 l8">
 						<div class="section conocenos-txt">
 							<h4>¿Quiénes somos?</h4>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+							<p>Salones de Fiestas Monaco es una empresa dedicada a la planeación y organización de eventos de todo tipo: bodas, XV años, fiestas, graduaciones o cualquier tipo de reunión social o empresarial. Contamos con más de 20 años de experiencia y miles de clientes satisfechos con nuestro trabajo que respaldan la calidad y capacidad de brindarle la mejor experiencia posible. Salones Monaco, la mejor opción para cualquier evento.</p>
 						</div>
 					</div>
-				</div>			
+				</div>	
+				<!-- end -->
+				<div class="divider grey darken-2"></div>
+				<!-- Mision's row -->		
 				<div class="row" id="conocenos-2">
 					<div class="col s12 m12 l8">
 						<div class="section conocenos-txt">
 							<h4>Nuestra Misión</h4>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+							<p>En Salones Monaco nuestro principal objetivo es brindarle a todos nuestros clientes una experiencia inolvidable, ofreciendole personal altamente capacitado y un ambiente vivaz y divertido en todas sus reuniones. Además de contar con los mejores alimentos, música en vivo y efectos especiales para darle a su fiesta un toque espectacular.</p>
 						</div>
 					</div>
 					<div class="col s12 m12 l4 center">
-						<div class="section conocenos-img"><img src="images/mesa-2.JPG" class="responsive-img" "></div>
+						<div class="section conocenos-img"><img src="images/baile.JPG" class="responsive-img" style="border-radius: 10px"></div>
 					</div>				
-				</div>						
+				</div>	
+				<!-- end -->					
 			</div>			
 		</div>
 		<!-- end -->
@@ -84,14 +108,14 @@
 		<!-- Second Parallax -->
 		<div class="parallax-container" id="second-parallax">
 			<div class="parallax">
-				<img src="images/space-1.jpg">		
+				<img src="images/parallax-2.png">		
 			</div>
 		</div>
 		<!-- end -->
 
 		<!-- Salones -->
-		<div class="grey darken-4 scrollspy" id="salones">
-			<div class="container grey lighten-5">
+		<div class="purple lighten-3 scrollspy" id="salones">
+			<div class="container pink lighten-5 z-depth-2">
 				<div class="row">
 					<div class="col s12 m12 l12">
 						<div class="section" id="salones-header">
@@ -99,36 +123,336 @@
 						</div>
 						<div class="divider header grey darken-2"></div>
 					</div>
-					<!-- Salon Fuentes' Row -->
-					<div class="row" id="salones-1">
-						<div class="col s12 m12 l7">
-							<div class="section salones-txt">
-								<h4>Salon Fuentes</h4>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-							</div>
+				</div>	
+				<!-- Salon Fuentes' Row -->
+				<div class="row scrollspy" id="salon-fuentes">
+					<div class="col s12 m12 l8">
+						<div class="section salones-txt black-text">
+							<h4>Salón Fuentes</h4>
+							<p>Ubicado a unas cuantas calles de la Calzada San Juan de Aragón, el Salón Fuentes es tu mejor opción para un evento excepcional, con un recinto amplio y elegante. En el Salón Fuentes contamos con un espectacular show de fuentes, pista de baile con efecto de luces, cabina musical con un gran repertorio y muchas sorpresan que te garantizan una experiencia inolvidable.</p>
+							<h5>¡Conócelo!</h5>
 						</div>
-						<div class="col s12 m12 l4 center">
-							<div class="section salones-img"><img src="images/flores-1.jpg" class="responsive-img" "></div>
-						</div>	
+					</div>	
+					<div class="col s12 m12 l4 center">
+						<div class="section salones-img"><img src="images/fuentes-salon.jpg" class="responsive-img" "></div>
+					</div>
+					<!-- Fuentes Slider Column -->
+					<div class="col s12 m12 l12">
+						<div class="section center">
+							<!-- Fuentes Slider -->
+							<div class="slider-container">
+								<div class="slider salon-slider hide-on-med-and-down">
+									<ul class="slides">
+										<li>
+											<img src="images/fuentes-slider-1.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-2.JPG">
+										</li>	
+										<li>
+											<img src="images/fuentes-slider-3.JPG">
+										</li>	
+										<li>
+											<img src="images/fuentes-slider-4.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-5.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-6.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-7.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-8.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-9.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-10.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-11.JPG">
+										</li>										
+									</ul>
+								</div>
+							</div>
+							<div class="slider-container-mov hide-on-large-only"">	
+								<div class="slider-mobile">
+									<ul class="slides">
+										<li>
+											<img src="images/mesa-1.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-2.JPG">
+										</li>	
+										<li>
+											<img src="images/fuentes-slider-3.JPG">
+										</li>	
+										<li>
+											<img src="images/fuentes-slider-4.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-5.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-6.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-7.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-8.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-9.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-10.JPG">
+										</li>
+										<li>
+											<img src="images/fuentes-slider-11.JPG">
+										</li>										
+									</ul>
+								</div>
+							</div>
+							<!-- end -->
+						</div>
 					</div>
 					<!-- end -->
-					<!-- Salon Jardin's row -->
-					<div class="row" id="salones-2">
-						<div class="col s12 m12 l7">
-							<div class="section salones-txt">
-								<h4>Salon Jardín</h4>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-							</div>
-						</div>
-						<div class="col s12 m12 l4 center">
-							<div class="section salones-img"><img src="images/flores-1.jpg" class="responsive-img" "></div>
-						</div>	
-					</div>	
-					<!-- end -->				
 				</div>
+				<!-- end -->
+				<div class="divider header grey darken-2"></div>
+				<!-- Salon Jardin's row -->
+				<div class="row scrollspy" id="salon-jardin">
+					<div class="col s12 m12 l8">
+						<div class="section salones-txt">
+							<h4>Salon Jardín</h4>
+							<p></p>
+							<a data-target="modal-jardin" class="waves-effect waves-light z-depth-2 purple btn modal-trigger">Conócelo</a>
+						</div>
+						<!-- Jardin Modal -->
+						<div class="modal" id="modal-jardin">
+								<!-- Fuentes Slider -->
+								<div class="slider salon-slider">
+									<ul class="slides">
+										<li>
+											<img src="images/lucy-1.png">
+										</li>
+										<li>
+											<img src="images/lucy-2.png">
+										</li>	
+										<li>
+											<img src="images/lucy-3.png">
+										</li>	
+										<li>
+											<img src="images/lucy-4.png">
+										</li>										
+									</ul>
+								</div>
+								<!-- end -->
+						</div>
+						<!-- end -->						
+					</div>
+					<div class="col s12 m12 l4 center">
+						<div class="section salones-img"><img src="images/flores-1.jpg" class="responsive-img" "></div>
+					</div>	
+				</div>	
+				<!-- end -->				
+			</div>
+		</div>
+		<!-- Servicios -->
+		<div class="purple lighten-3 scrollspy" id="servicios">	
+			<!-- Servicios header -->
+			<div class="container pink lighten-5 z-depth-2">
+				<div class="row" id="servicios-hrow">
+					<div class="col s12 m12 l12">
+						<div class="section" id="servicios-header" >
+							<h3>Nuestros Servicios</h3>
+						</div>
+						<div class="divider header grey darken-2"></div>
+					</div>
+				</div>
+			<!-- end -->
+			<!-- Servicios content -->
+				<div class="row">
+					<div class="col s12 m12 l12">
+						<div class="section servicios-txt">
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						</div>
+					</div>
+					<div class="col s12 m12 l4">
+						<div class="section center" id="servicio-1">
+							<img class="responsive-img circle" src="images/estacionamiento.jpg" id="image-1">
+							<h5>Valet Parking</h5>
+							<span class="center">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</span>
+						</div>
+					</div>
+					<div class="col s12 m12 l4">
+						<div class="section center" id="servicio-1">
+							<img class="responsive-img circle" src="images/estacionamiento.jpg" id="image-2">
+							<h5>Valet Parking</h5>
+							<span class="center">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</span>
+						</div>
+					</div>		
+					<div class="col s12 m12 l4">
+						<div class="section center" id="servicio-1">
+							<img class="responsive-img circle" src="images/estacionamiento.jpg" id="image-3">
+							<h5>Valet Parking</h5>
+							<span class="center">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</span>
+						</div>
+					</div>	
+				</div>			
+			</div>
+			<!-- end -->
+
+			<!-- Paquetes -->
+			<div class="purple lighten-3 scrollspy" id="paquetes">
+				<div class="container pink lighten-5 z-depth-2">
+					<!-- Paquetes header -->
+					<div class="row">
+						<div class="col s12 m12 l12">
+							<div class="section" id="paquetes-header" >
+								<h3>Paquetes</h3>
+							</div>
+							<div class="divider header white"></div>
+						</div>
+					</div>
+					<!-- end -->
+					<!-- Paquete's Content -->
+					<div class="row paquetes-content">
+						<div class="col s12 m12 l4">
+							<!-- Paquete 1 card -->
+							<div class="card" id="paquete-1">
+								<div class="card-image waves-effect waves-block waves-light">
+									<img class="activator responsive-img" src="images/banquete.jpg">
+								</div>
+								<div class="card-content">
+									<span class="card-title activator grey-text text-darken-3">Paquete 1</span>
+									<p><a class="activator waves-effect waves-teal btn-flat">Ver más</a></p>
+								</div>
+								<div class="card-reveal">
+									<span class="card-title activator grey-text text-darken-3">Paquete 1 <i class="material-icons right">close</i></span>
+								    <ul class="collection">
+								      <li class="collection-item">Alvin</li>
+								      <li class="collection-item">Alvin</li>
+								      <li class="collection-item">Alvin</li>
+								      <li class="collection-item">Alvin</li>
+								    </ul>
+								</div>
+							</div>
+							<!-- end -->
+						</div>
+						<div class="col s12 m12 l4">
+							<!-- Paquete 2 card -->
+							<div class="card" id="paquete-2">
+								<div class="card-image waves-effect waves-block waves-light">
+									<img class="activator responsive-img" src="images/banquete.jpg">
+								</div>
+								<div class="card-content">
+									<span class="card-title activator grey-text text-darken-3">Paquete 2</span>
+									<p><a class="activator waves-effect waves-teal btn-flat">Ver más</a></p>
+								</div>
+								<div class="card-reveal">
+									<span class="card-title activator grey-text text-darken-3">Paquete 2 <i class="material-icons right">close</i></span>
+								    <ul class="collection">
+								      <li class="collection-item">Alvin</li>
+								      <li class="collection-item">Alvin</li>
+								      <li class="collection-item">Alvin</li>
+								      <li class="collection-item">Alvin</li>
+								    </ul>
+								</div>
+							</div>
+							<!-- end -->
+						</div>
+						<div class="col s12 m12 l4">
+							<!-- Paquete 3 card -->
+							<div class="card" id="paquete-3">
+								<div class="card-image waves-effect waves-block waves-light">
+									<img class="activator responsive-img" src="images/banquete.jpg">
+								</div>
+								<div class="card-content">
+									<span class="card-title activator grey-text text-darken-3">Paquete 3</span>
+									<p><a class="activator waves-effect waves-teal btn-flat">Ver más</a></p>
+								</div>
+								<div class="card-reveal">
+									<span class="card-title activator grey-text text-darken-3">Paquete 3 <i class="material-icons right">close</i></span>
+								    <ul class="collection">
+								      <li class="collection-item">Alvin</li>
+								      <li class="collection-item">Alvin</li>
+								      <li class="collection-item">Alvin</li>
+								      <li class="collection-item">Alvin</li>
+								    </ul>
+								</div>
+							</div>
+							<!-- end -->
+						</div>		
+					</div>
+				</div>		
+			</div>
+			<!-- end -->
+		</div>
+		<!-- end -->
+		<!-- Begin's Parallax 3 -->
+		<div class="parallax-container" id="third-parallax">
+			<div class="parallax">
+				<img src="images/parallax-3.png">		
+			</div>
+		</div>
+		<!-- end -->
+
+		<!-- Ubicacion -->
+		<div class="purple lighten-3 scrollspy" id="ubicacion">
+			<div class="container pink lighten-5 z-depth-2">
+				<!-- Ubicacion Header -->
+				<div class="row">
+					<div class="col s12 m12 l12">
+						<div class="section" id="ubicacion-header" >
+							<h3>Ubicación</h3>
+						</div>
+						<div class="divider header white"></div>
+					</div>
+				</div>
+				<!-- end -->
+
+				<!-- Ubicacion navbar -->
+				<div class="row">
+					<!-- Ubicacion Navbar -->
+					<div class="col s12 m12 l12 center">
+						<a class="btn purple" id="show-fuentes">Fuentes</a>
+						<a class="btn purple" id="show-jardin">Jardín</a>
+					</div>
+					<!-- end -->
+					<!-- Ubicacion content -->
+					<div class="col s12 m12 l12">
+						<div class="center" id="ubicacion-fuentes">
+							<div>
+								<h3>Salon Fuentes</h3>
+							</div>
+							<iframe class="z-depth-2" width="80%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=My%20location&destination=Salones%20Monaco%20Fuentes&key=AIzaSyBIUZP9CkzpLfgK_dp_vTkxfWDHkeMrr8E" allowfullscreen></iframe>
+						</div>
+					</div>
+					<div class="col s12 m12 l12">
+						<div class="center" id="ubicacion-jardin" hidden="true">
+							<div>
+								<h3>Salon Jardín</h3>
+							</div>
+							<iframe width="80%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=Current+Location&destination=place_id:ChIJ_3UAXYL50YURh6NKkwLlg_k&key=AIzaSyBIUZP9CkzpLfgK_dp_vTkxfWDHkeMrr8E" allowfullscreen></iframe>
+						</div>
+					</div>
+					<!-- end -->
+				</div>
+				<!-- end -->
 			</div>
 		</div>
 		<!-- end -->
 	</main>
+	<footer class="page-footer">
+		<div class="container">
+			<a href='http://www.freepik.com/free-vector/calligraphic-borders-collection_759750.htm'>Designed by Freepik</a>
+		</div>
+	</footer>
 </body>
 </html>

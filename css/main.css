@@ -1,12 +1,49 @@
 /* Navbar styles */
-
+nav{
+	height: auto;
+}
+nav .nav-wrapper{
+	height: auto;
+	margin-top: 7px;
+}
 nav .brand-logo{
 	float: left;
 	position: relative;
 	
 }
-nav ul{
+#navbar-large{
+ 	vertical-align: top;
 	display: inline-block;
+}
+#logo-container{
+	float: left;
+	position: relative;
+	display: inline-block;
+}
+/* end */
+
+.divider.header{
+	margin-left: 1em;
+	margin-right: 1em;
+}
+.centered-logo{
+    width: 500px;
+    height:325px;
+    position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -162px; /* Negative half of height. */
+	margin-left: -250px;
+}
+/* Parallax */
+#first-parallax {
+	height: 630px;
+}
+#second-parallax {
+	height: 630px;
+}
+#third-parallax{
+	height: 630px;
 }
 /* end */
 
@@ -16,10 +53,6 @@ nav ul{
 }
 #conocenos-2{
 	margin-bottom: 0em;
-}
-.divider.header{
-	margin-left: 1em;
-	margin-right: 1em;
 }
 #conocenos-header {
 	padding: 1em;
@@ -39,14 +72,73 @@ nav ul{
 .salones-txt{
 	padding: 1em;
 }
-.conocenos-img {
+div .salones-img {
 	padding: 1em;
 }
-
-/* Parallax */
-#first-parallax {
-	height: 500px;
+.slider-container{
+	padding-left: 3em;
+	padding-right: 3em;
 }
-#second-parallax {
-	height: 500px;
+.slider-container-mov{
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.salon-slider {
+
+}
+
+/* Servicios */
+
+#servicios {
+	border-bottom: 0em;
+}
+#servicios-hrow{
+	margin-bottom: 0em;
+}
+#servicios-header {
+	padding: 1em;
+	border-bottom: 0em;
+}
+.servicios-txt{
+	padding: 1em;
+}
+div .servicios-img {
+	padding: 1em;
+}
+#servicios-list li{
+	margin-top: 10px;
+}
+#servicio-1{
+	padding: 1em;
+}
+#image-1{
+	width: 160px;
+	height: 160px; 
+}
+#image-2{
+	width: 160px;
+	height: 160px; 
+}
+#image-3{
+	width: 160px;
+	height: 160px; 
+}
+
+/* Paquetes */
+#paquetes-header{
+	margin-left: 1em;
+	margin-right: 1em;
+}
+.paquetes-content{
+	padding-left: 1em;
+	padding-right: 1em;
+}
+/* Ubicación */
+#ubicacion-header {
+	padding: 1em;
+}
+/* end */
+/* Vectors */
+.divider-vector{
+	position:absolute; 
 }
